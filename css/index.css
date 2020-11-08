@@ -1,0 +1,228 @@
+/* DEFAULT | NÃO MUDA DEPENDENDO DA RESOLUÇÃO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+ 	
+	/* #region | SITE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+		
+		/* 1) GRID DO SITE */
+		body {	
+            background-color: var(--VAR_AZUL);
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas: 	
+			/* COLUNA 1 */	
+			"MAIN" /*LINHA 1 */
+			"FOOTER" /*LINHA 2 */
+        }
+        
+			/* A) DEFININDO AREA DO MAIN */
+			main {                
+                grid-area: MAIN;
+                width: 350px;
+                height: 500px;
+                margin: auto;
+                margin-top: 30px;    
+			}
+
+			/* A) DEFININDO AREA DO MAIN */
+			footer {                
+				grid-area: FOOTER;
+				margin: auto;
+				margin-top: -70px;
+				color: var(--VAR_BRANCO_ESCURO);
+				font-size: 0.85em;
+			}
+
+	/* #endregion GRID DO SITE*/
+
+	/* #region | MAIN xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+			
+		/* 1)  GRID PRINCIPAL */
+		#MAIN {	
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+        }    
+        
+            /* A) SECTION ----------------------------------------------------------------------------------------*/
+            #MAIN_TITULO{
+                flex: 0.3;  
+                display: flex;
+                align-items: center;
+                justify-content: center;
+				background-color: #FFF;				
+				border-radius: 10px 10px 0 0;
+			}
+
+				/* I) ELEMENTO */
+				#MAIN_TITULO > p{
+					margin-top: 5px;
+					color: var(--VAR_AZUL);	
+					font-size: 1.9em;				
+				}
+
+            /* B) SECTION ----------------------------------------------------------------------------------------*/
+            #MAIN_ICONE{
+                flex: 0.1;  
+                display: flex;
+                align-items: center;
+                justify-content: center;         
+				background-color: var(--VAR_BRANCO_ESCURO);
+				
+			}
+
+				/* I) ELEMENTO */	
+				#CLIMA_ICONE > img {
+					width: 150px;
+					display: block;
+				}
+
+            /* C) SECTION ----------------------------------------------------------------------------------------*/
+            #MAIN_NOTIFICACAO{
+                flex: 0.18; 
+                align-items: center;
+                justify-content: center;
+                display: none;
+				background-color: #f8d7da;	
+				margin-bottom: -30px;
+			}
+			
+				/* I) ELEMENTO */
+				#MAIN_NOTIFICACAO > p{
+					color: #721c24;
+					font-size: 1.2em;
+					padding: 10px 0;
+				}
+
+            /* D) SECTION ----------------------------------------------------------------------------------------*/
+            #MAIN_TEMPERATURA_VALOR{
+                flex: 0.1; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+				background-color: var(--VAR_BRANCO_ESCURO);
+				color: var(--VAR_AZUL);
+			}
+			
+				/* I) ELEMENTO */
+				#MAIN_TEMPERATURA_VALOR > p{			
+					font-size: 4em;
+					text-align: center;
+					cursor: pointer;
+				}
+				
+				/* II) ELEMENTO */
+				#CELSIUS{
+					font-size: 2.5em;
+					padding-top: 18px;
+				}
+
+            /* E) SECTION ----------------------------------------------------------------------------------------*/
+            #MAIN_TEMPERATURA_DESCRICAO{
+                flex: 0.1; 
+                display: flex;
+                align-items: center;
+				justify-content: center;  
+				background-color: var(--VAR_BRANCO_ESCURO);            
+			}
+
+				/* II) ELEMENTO */
+				#MAIN_TEMPERATURA_DESCRICAO > p{					
+					font-size: 1.2em;
+					color: var(--VAR_AZUL);
+					margin-bottom: 15px;
+				}
+			
+			/* F) SECTION ----------------------------------------------------------------------------------------*/
+			#MAIN_LOCALIZACAO{
+				flex:0.2; 
+				background-color: #fff; 
+				display: flex;
+                align-items: center;
+				justify-content: center;  
+				border-radius: 0 0 10px 10px;
+			}
+
+			#MAIN_LOCALIZACAO > p{
+				margin-top:5px;
+				background-color: #fff; 
+				color: var(--VAR_AZUL);
+				text-align: center;
+			}
+
+
+
+	/* #endregion GRID MAIN*/
+
+	/* #region | FOOTER xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+		
+		/* 1) FOOTER */
+		#FOOTER{				
+			margin-bottom: 20px;
+		}
+
+			/* A) ELEMENTO AUTORA */
+			#FOOTER_AUTORA{
+				text-align: center;	
+				color: #4b4b5e;	
+				font-size: 0.9em;
+				padding-top: 10px;
+			}
+
+	/* #endregion FOOTER */	
+	
+/* * VARIÁVEIS | XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+	/* #region VARIAVEIS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+				
+		:root {
+            --VAR_AZUL:#293251;  
+            --VAR_BRANCO_ESCURO:#F4F9FF; 
+		}  
+
+	/* #endregion VARIAVEIS */
+
+/* RESET |  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+	/* #region ELEMENTOS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	
+	* {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		border: none;
+		outline: none;
+        box-sizing: border-box;
+        font-family: "Rimouski";
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	ul {
+		list-style:none;
+	}
+	
+	img {
+		width: 100%;
+    }
+    
+	h1{
+		font-size: 2em; 
+	}
+
+	h2{
+		font-size: 1.5em;
+	}
+
+	h3{
+		font-size: 1.17em;
+	}
+
+	h4{
+		font-size: 1em;
+	}
+
+/* #endregion ELEMENTOS */	

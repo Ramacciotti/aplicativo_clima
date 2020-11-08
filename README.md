@@ -1,2 +1,2 @@
 # aplicativo_clima
-Aplicativo funcional com API externa.
+Aplicativo criado com consulta a API externo.
